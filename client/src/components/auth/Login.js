@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -13,28 +12,9 @@ const Login = () => {
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
-    // console.log('SUCCESS');
-    const user = {
-      email,
-      password,
-    };
-
-    try {
-      const config = {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      };
-
-      const body = JSON.stringify(user);
-
-      const res = await axios.post('/api/auth', body, config);
-      console.log(res.data);
-    } catch (err) {
-      console.error(err.response.data);
-    }
+    console.log('SUCCESS');
   };
 
   return (
