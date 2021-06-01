@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Repo = ({ repo }) => {
   return (
-    <div key={repo._id} className='repo bg-white p-1 my-1'>
+    <div key={repo.id} className='repo bg-white p-1 my-1'>
       <div>
         <h4>
           <a href={repo.html_url} target='_blank' rel='noopener noreferrer'>
